@@ -67,3 +67,4 @@ ____
 - Beef up error handing
 - Add more valid tests
 - The MVP used is just a quick custom one, while a framework like Mosbey would have lot of performance improvements
+- JWT bearer token should be stored in a keystore and used for subsequent request.  
