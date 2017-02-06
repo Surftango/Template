@@ -20,6 +20,8 @@ import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
+ * Provider for all the Network stuff
+ *
  * Created by Shyam on 2/4/17.
  */
 

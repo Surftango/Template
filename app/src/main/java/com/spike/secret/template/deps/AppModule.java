@@ -18,6 +18,8 @@ import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
 /**
+ * Provider for all Application stuffs
+ *
  * Created by Shyam on 2/4/17.
  */
 
