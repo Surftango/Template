@@ -1,0 +1,212 @@
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:id="@+id/content">
+
+    <RelativeLayout
+        android:id="@+id/details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+<!--
+        <TextView
+            android:id="@+id/productId"
+            style="?android:textAppearanceMedium"
+            android:padding="16dp"
+            android:lineSpacingMultiplier="1.2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/not_available" />
+
+-->
+
+        <RelativeLayout
+            android:id="@+id/subTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/reviewCount"
+            style="?android:textAppearanceMedium"
+            android:paddingRight="16dp"
+            android:paddingLeft="2dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:lineSpacingMultiplier="1.2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/not_available"
+            android:layout_alignParentRight="true"
+            android:textStyle="bold"
+            android:textColor="#00F"
+            android:layout_centerInParent="true"/>
+<!--
+
+        <TextView
+            android:id="@+id/reviewRating"
+            style="?android:textAppearanceMedium"
+            android:paddingRight="2dp"
+            android:paddingLeft="16dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:lineSpacingMultiplier="1.2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/not_available"
+            android:layout_toLeftOf="@id/reviewCount"
+            android:layout_centerInParent="true"/>
+
+            -->
+
+            <LinearLayout
+                android:id="@+id/reviewRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_toLeftOf="@id/reviewCount"
+                android:layout_centerInParent="true">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/empty_star"/>
+                <ImageView
+                    android:layout_width="19dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/empty_star"/>
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/empty_star"/>
+                <ImageView
+                    android:layout_width="19dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/empty_star"/>
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/empty_star"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/productName"
+                style="?android:textAppearanceMedium"
+                android:padding="16dp"
+                android:lineSpacingMultiplier="1.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/not_available"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@id/reviewRating"
+                android:ellipsize="end"
+                android:textStyle="bold"
+                android:textColor="#00F"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+
+
+        <TextView
+            android:id="@+id/shortDescription"
+            style="?android:textAppearanceMedium"
+            android:padding="16dp"
+            android:lineSpacingMultiplier="1.2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/not_available"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/subTitle"/>
+
+        <ImageView
+            android:id="@+id/productImage"
+            android:padding="16dp"
+            android:lineSpacingMultiplier="1.2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/not_available"
+            android:src="@drawable/no_image"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/shortDescription"/>
+
+        <LinearLayout
+            android:id="@+id/price_holder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/productImage"
+            android:layout_centerHorizontal="true">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/price"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/price"
+                style="?android:textAppearanceMedium"
+                android:padding="5dp"
+                android:lineSpacingMultiplier="1.2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/not_available"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/stock_holder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/price_holder"
+            android:layout_centerHorizontal="true">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/status"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/open_status"
+                style="?android:textAppearanceMedium"
+                android:padding="5dp"
+                android:lineSpacingMultiplier="1.2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/in_stock"
+                android:textColor="#309c2a"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/description_holder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/stock_holder"
+            android:orientation="vertical">
+
+            <TextView
+                style="?android:textAppearanceMedium"
+                android:paddingLeft="16dp"
+                android:paddingBottom="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/description"
+                android:textStyle="bold"
+                android:textColor="#000"/>
+            <TextView
+                android:id="@+id/longDescription"
+                style="?android:textAppearanceMedium"
+                android:padding="16dp"
+                android:lineSpacingMultiplier="1.2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/not_available"
+                />
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+
+</ScrollView>
