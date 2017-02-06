@@ -83,8 +83,7 @@ public class UserProfileFragment extends Fragment implements ProfileContract.Vie
             //perform operation
             emailView.setErrorEnabled(false);
             passwordView.setErrorEnabled(false);
-            //presenter.authenticateAndRetrieve(username,password);
-            presenter.authenticateAndRetrieve("shyammohan.sugathan@gmail.com","4newjob#123D");
+            presenter.authenticateAndRetrieve(username,password);
         }
     }
 
