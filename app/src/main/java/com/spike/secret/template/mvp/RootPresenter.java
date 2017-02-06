@@ -9,6 +9,8 @@ import rx.schedulers.Schedulers;
 import rx.subscriptions.CompositeSubscription;
 
 /**
+ * Root presenter with basic preseneter functionality. Other preseneters should extend from this
+ *
  * Created by Shyam on 2/5/17.
  */
 

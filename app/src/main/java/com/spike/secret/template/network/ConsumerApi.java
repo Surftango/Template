@@ -17,6 +17,8 @@ import retrofit2.http.Query;
 import rx.Observable;
 
 /**
+ * APIs to get the protected end point
+ *
  * Created by Shyam on 2/4/17.
  */
 public interface ConsumerApi {

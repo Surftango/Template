@@ -2,7 +2,6 @@ package com.spike.secret.template.ui.landing;
 
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.PersistableBundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.NavigationView;
@@ -23,6 +22,13 @@ import com.spike.secret.template.ui.profile.UserProfileFragment;
 import com.spike.secret.template.ui.restaurantlist.fragment.RestaurantListFragment;
 
 /**
+ * Main Screen with a drawer layout so that we can swap in child views for
+ *  - Restaurant List: This screen shows the restaurants retrieved from the service. Primary
+ *      responsibility is to display the items in both a list and grid layout.
+ *  - Favourite Restaurant List: This screen shows the restaurants that are added as favourites,
+ *      from the Details screen. Also provide context menu to clear fav
+ *   - Profile Screen: Access the Consumer details, after Login to the service.
+ *
  * Created by Shyam on 2/5/17.
  */
 
@@ -37,7 +43,7 @@ public class LandingActivity extends AppCompatActivity implements LandingContrac
     @NonNull
     private LandingContract.Presenter presenter;
     private Handler mHandler;
-    private int currentView  = R.id.nav_restaurants;
+    private int currentView = R.id.nav_restaurants;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -45,8 +51,8 @@ public class LandingActivity extends AppCompatActivity implements LandingContrac
         setContentView(R.layout.drawer_wrapper);
         rootView = findViewById(android.R.id.content);
         setPresenter(new LandingPresenter(this, this));
-        if(savedInstanceState!=null){
-            currentView = savedInstanceState.getInt(VIEW_CHOICE)==0?R.id.nav_restaurants:savedInstanceState.getInt(VIEW_CHOICE);
+        if (savedInstanceState != null) {
+            currentView = savedInstanceState.getInt(VIEW_CHOICE) == 0 ? R.id.nav_restaurants : savedInstanceState.getInt(VIEW_CHOICE);
         }
         initView(savedInstanceState);
     }
@@ -144,8 +150,8 @@ public class LandingActivity extends AppCompatActivity implements LandingContrac
     }
 
     @Override
-    public void onSaveInstanceState (Bundle outState){
-        outState.putInt(VIEW_CHOICE,currentView);
+    public void onSaveInstanceState(Bundle outState) {
+        outState.putInt(VIEW_CHOICE, currentView);
         super.onSaveInstanceState(outState);
     }
 }

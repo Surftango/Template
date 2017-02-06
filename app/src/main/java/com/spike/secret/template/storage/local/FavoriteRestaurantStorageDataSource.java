@@ -23,6 +23,8 @@ import rx.functions.Func1;
 import rx.schedulers.Schedulers;
 
 /**
+ * RestaurantDataSource implementation with SQLite
+ *
  * Created by Shyam on 2/4/17.
  */
 

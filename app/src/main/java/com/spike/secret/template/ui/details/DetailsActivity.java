@@ -28,6 +28,9 @@ import java.util.List;
 
 
 /**
+ * This screen displays the details of the restaurant selected from the restaurant list screen.
+ * Also provide the ability to add a restaurant to a favourites list
+ *
  * Created by Shyam on 2/5/17.
  */
 

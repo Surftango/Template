@@ -11,6 +11,8 @@ import retrofit2.http.Query;
 import rx.Observable;
 
 /**
+ * API to get the Restaurant info
+ *
  * Created by Shyam on 2/4/17.
  */
 public interface RestaurantsApi {

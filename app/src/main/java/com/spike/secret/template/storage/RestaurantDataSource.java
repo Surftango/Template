@@ -9,6 +9,8 @@ import java.util.List;
 import rx.Observable;
 
 /**
+ * Contract for all the RestaurantDataSource
+ *
  * Created by Shyam on 2/4/17.
  */
 

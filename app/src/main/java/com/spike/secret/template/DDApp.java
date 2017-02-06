@@ -8,6 +8,8 @@ import com.spike.secret.template.deps.DaggerAppComponent;
 import com.spike.secret.template.deps.NetworkModule;
 
 /**
+ * The DI container for the App.
+ *
  * Created by Shyam on 2/4/17.
  */
 
