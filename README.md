@@ -1,7 +1,7 @@
 # Restaurant scanner
 
-An application that enables you to talk to the
-- View all restaurants near a given location, using the DoorDash REST API service
+An application that enables you to
+- View all restaurants near a given location, using the DD REST API service
 - Add restaurants to a favorite list
 - Ability to Login and access protected resource
 
@@ -10,16 +10,16 @@ Application Walk-through
 
 The application has 3 primary Screens
 
-- Splash Screen: User generally dont see this screen unless a cold-launch that will take a
+- Splash Screen: User generally don't see this screen unless a cold-launch that will take a
    noticeable time.
-- Landing Screen: Main Screen with a drawer layout so that we can swap in child vies for
-    - Restaurant List: This screen shows the restaurant retrieved from the service. Primary
+- Landing Screen: Main Screen with a drawer layout so that we can swap in child views for
+    - Restaurant List: This screen shows the restaurants retrieved from the service. Primary
           responsibility is to display the items in both a list and grid layout.
     - Favourite Restaurant List: This screen shows the restaurants that are added as favourites,
-           from the Details screen
+           from the Details screen. Also provide context menu to clear fav
     - Profile Screen: Access the Consumer details, after Login to the service.
 - Restaurant Details: This screen displays the details of the restaurant selected from the restaurant
-    list screen.
+    list screen. Also provide the ability to add a restaurant to a favourites list.
 
 
 Design
@@ -58,3 +58,11 @@ Assumptions
 - Targeted at hdpi devices (and hence only resources are provided for those)
 - Use of possibly copyrighted images.
 - Its assumed that product images are not very big.
+- The package names and App names are purposefully named to avoid using DD names.
+
+TODO
+____
+
+- Add proper JavaDoc comments
+- Beef up error handing
+- Add more valid tests
