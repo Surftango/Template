@@ -66,3 +66,4 @@ ____
 - Add proper JavaDoc comments
 - Beef up error handing
 - Add more valid tests
+- The MVP used is just a quick custom one, while a framework like Mosbey would have lot of performance improvements
