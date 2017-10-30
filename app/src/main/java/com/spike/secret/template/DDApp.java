@@ -6,6 +6,7 @@ import com.spike.secret.template.deps.AppComponent;
 import com.spike.secret.template.deps.AppModule;
 import com.spike.secret.template.deps.DaggerAppComponent;
 import com.spike.secret.template.deps.NetworkModule;
+import com.spike.secret.template.utils.SSLInjector;
 
 /**
  * The DI container for the App.
@@ -24,7 +25,7 @@ public class DDApp extends Application {
                 .appModule(new AppModule(this))
                 .networkModule(new NetworkModule())
                 .build();
-        com.spike.secret.template.utils.SSLInjector.trustAllCertificates();
+        SSLInjector.trustAllCertificates();
 
 
     }
