@@ -24,6 +24,8 @@ public class DDApp extends Application {
                 .appModule(new AppModule(this))
                 .networkModule(new NetworkModule())
                 .build();
+        com.spike.secret.template.utils.SSLInjector.trustAllCertificates();
+
 
     }
 
