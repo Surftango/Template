@@ -2,6 +2,7 @@ package com.spike.secret.template;
 
 import android.app.Application;
 
+import com.buddybuild.sdk.BuddyBuild;
 import com.spike.secret.template.deps.AppComponent;
 import com.spike.secret.template.deps.AppModule;
 import com.spike.secret.template.deps.DaggerAppComponent;
@@ -26,6 +27,7 @@ public class DDApp extends Application {
                 .networkModule(new NetworkModule())
                 .build();
         SSLInjector.trustAllCertificates();
+        //BuddyBuild.setup(this);
 
 
     }

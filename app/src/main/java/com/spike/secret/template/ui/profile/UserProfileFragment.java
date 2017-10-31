@@ -72,6 +72,7 @@ public class UserProfileFragment extends Fragment implements ProfileContract.Vie
             }
         }catch (Exception supress){}
 
+        emailView = null;
         //Validate
         String username = emailView.getEditText().getText().toString();
         String password = passwordView.getEditText().getText().toString();
