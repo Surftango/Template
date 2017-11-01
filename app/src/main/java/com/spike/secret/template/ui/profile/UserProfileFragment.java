@@ -64,10 +64,8 @@ public class UserProfileFragment extends Fragment implements ProfileContract.Vie
 
     @Override
     public void onClick(View v) {
-        if(true) {
-            throw new NullPointerException();
-        }
-        //hide Keyboard
+        throw new UnknownError();
+        /*//hide Keyboard
         try{
             if (v != null) {
                 ((InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE)).
@@ -75,7 +73,6 @@ public class UserProfileFragment extends Fragment implements ProfileContract.Vie
             }
         }catch (Exception supress){}
 
-        emailView = null;
         //Validate
         String username = emailView.getEditText().getText().toString();
         String password = passwordView.getEditText().getText().toString();
@@ -88,7 +85,7 @@ public class UserProfileFragment extends Fragment implements ProfileContract.Vie
             emailView.setErrorEnabled(false);
             passwordView.setErrorEnabled(false);
             presenter.authenticateAndRetrieve(username,password);
-        }
+        }*/
     }
 
     public boolean validateEmail(String email) {
