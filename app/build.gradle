@@ -1,5 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'ca-maa-wrapper-plugin'
 
 android {
     compileSdkVersion 25
@@ -62,13 +63,27 @@ dependencies {
     compile 'com.squareup.sqlbrite:sqlbrite:1.1.1'
 
     //Buddy build
-    compile 'com.buddybuild:sdk:0.0.84@aar'
-    compile 'com.squareup:seismic:1.0.2'
-    compile 'com.faendir:acra:4.10.0'
+    //compile 'com.buddybuild:sdk:0.0.84@aar'
+    //compile 'com.squareup:seismic:1.0.2'
+    //compile 'com.faendir:acra:4.10.0'
 
+}
 
+afterEvaluate {
 
+    android.applicationVariants.all { variant ->
+        def newWrapperTask = tasks.create(name: "${variant.name}MAAWrap", type: com.ca.android.wrapper.gradle.CAMAAWrapperTask)
+        newWrapperTask.ext.emmHome = 'CAMobileAppAnalytics-wrapper/emm'
+        newWrapperTask.ext.plistFilePath = 'CAMobileAppAnalytics-wrapper/securenew_camdo.plist'
+        //newWrapperTask.ext.signConfig = 'CAMobileAppAnalytics-wrapper/emm/conf/jarsigner.properties'
+        newWrapperTask.ext.verboseFlag = true;
+        newWrapperTask.ext.noResFlag = false;
+        variant.outputs.each { output ->
+            newWrapperTask.ext.apkFilePath = output.outputFile.toString()
+            newWrapperTask.dependsOn output.packageApplication
+        }
+        variant.assemble.dependsOn newWrapperTask
 
-
+    }
 
 }
