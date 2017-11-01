@@ -64,6 +64,9 @@ public class UserProfileFragment extends Fragment implements ProfileContract.Vie
 
     @Override
     public void onClick(View v) {
+        if(true) {
+            throw new NullPointerException();
+        }
         //hide Keyboard
         try{
             if (v != null) {
