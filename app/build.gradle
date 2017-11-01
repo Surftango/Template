@@ -78,6 +78,7 @@ afterEvaluate {
         //newWrapperTask.ext.signConfig = 'CAMobileAppAnalytics-wrapper/emm/conf/jarsigner.properties'
         newWrapperTask.ext.verboseFlag = true;
         newWrapperTask.ext.noResFlag = false;
+        newWrapperTask.ext.noSignFlag = true;
         variant.outputs.each { output ->
             newWrapperTask.ext.apkFilePath = output.outputFile.toString()
             newWrapperTask.dependsOn output.packageApplication
